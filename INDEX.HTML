@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chetananand Financial Services | AMFI Registered Mutual Fund Distributor</title>
+    <meta name="description" content="Mutual Fund SIP & Lumpsum Investment Assistance by Chetananand Financial Services. AMFI Registered Mutual Fund Distributor (ARN-178718).">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables & Reset */
+        :root {
+            --primary: #003b5c;
+            --secondary: #d4af37;
+            --text-dark: #333333;
+            --text-light: #f4f4f4;
+            --bg-light: #ffffff;
+            --bg-gray: #f9fafb;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Typography */
+        h1, h2, h3 { color: var(--primary); font-weight: 700; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* Header & Navigation */
+        header {
+            background: var(--bg-light);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 5%;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .brand h1 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .brand p {
+            font-size: 0.85rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover, .nav-links a:focus {
+            color: var(--secondary);
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .lang-switch {
+            background: #eee;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .lang-switch:hover { background: #ddd; }
+        .lang-switch.active { background: var(--primary); color: white; }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .btn-primary { background: var(--primary); color: white; border: 2px solid var(--primary); }
+        .btn-primary:hover { background: transparent; color: var(--primary); }
+        
+        .btn-secondary { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
+        .btn-secondary:hover { background: var(--primary); color: white; }
+
+        /* Sections */
+        section { padding: 5rem 5%; }
+        .bg-gray { background: var(--bg-gray); }
+        .section-title { text-align: center; margin-bottom: 3rem; font-size: 2.2rem; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(0, 59, 92, 0.9), rgba(0, 59, 92, 0.8)), url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: white;
+            text-align: center;
+            padding: 8rem 5%;
+        }
+        .hero h1 { color: white; font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .hero .cta-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .hero .btn-secondary { border-color: white; color: white; }
+        .hero .btn-secondary:hover { background: white; color: var(--primary); }
+
+        /* Grid Layouts */
+        .grid-2, .grid-3 { display: grid; gap: 2rem; }
+        .grid-2 { grid-template-columns: 1fr 1fr; }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { margin-bottom: 1rem; color: var(--primary); }
+
+        /* Contact Section */
+        .contact-info { background: var(--primary); color: white; padding: 2rem; border-radius: 8px; }
+        .contact-info h3 { color: var(--secondary); }
+        .contact-info p { margin-bottom: 1rem; font-size: 1.1rem; }
+        .contact-info a { color: white; text-decoration: underline; }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: #888;
+            text-align: center;
+            padding: 2rem 5%;
+            font-size: 0.85rem;
+        }
+        .disclaimer { border-top: 1px solid #333; margin-top: 1rem; padding-top: 1rem; font-weight: bold; color: #aaa; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: block; }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                padding: 1rem 5%;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            .nav-links.active { display: flex; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-top">
+            <div class="brand">
+                <h1 data-i18n="brand-name">CHETANANAND FINANCIAL SERVICES</h1>
+                <p><span data-i18n="brand-reg">AMFI Registered Mutual Fund Distributor</span> | ARN-178718</p>
+            </div>
+            <div class="controls">
+                <button class="lang-switch active" onclick="setLanguage('en')">EN</button>
+                <button class="lang-switch" onclick="setLanguage('hi')">हिंदी</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+        <nav class="nav-container">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" data-i18n="nav-home">Home</a></li>
+                <li><a href="#about" data-i18n="nav-about">About</a></li>
+                <li><a href="#mutual-funds" data-i18n="nav-mf">Mutual Funds</a></li>
+                <li><a href="#sip" data-i18n="nav-sip">SIP</a></li>
+                <li><a href="#services" data-i18n="nav-services">Services</a></li>
+                <li><a href="#why-us" data-i18n="nav-why">Why Us</a></li>
+                <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <h1 data-i18n="hero-head">Plan Your Investments. Build Your Financial Future.</h1>
+            <p data-i18n="hero-sub">Mutual Fund SIP & Lumpsum Investment Assistance</p>
+            <div class="cta-group">
+                <a href="#contact" class="btn btn-primary" data-i18n="hero-cta-1">START YOUR INVESTMENT JOURNEY</a>
+                <a href="#services" class="btn btn-secondary" data-i18n="hero-cta-2">OUR SERVICES</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2 class="section-title" data-i18n="about-title">About Us</h2>
+            <div class="grid-2">
+                <div>
+                    <h3 data-i18n="about-sub">Your Dedicated Financial Partner</h3>
+                    <p data-i18n="about-text-1" style="margin-bottom:1rem;">At Chetananand Financial Services, we simplify the investment process for individuals and families. As an AMFI Registered Mutual Fund Distributor, we are committed to facilitating proper asset allocation and disciplined investing strategies.</p>
+                    <p data-i18n="about-text-2">We provide operational support and execution services, ensuring your investment journey is seamless, structured, and aligned with standard financial practices.</p>
+                </div>
+                <div class="card bg-gray">
+                    <h3 data-i18n="about-creds">Credentials & Registrations</h3>
+                    <ul style="margin-top: 1rem; line-height: 2;">
+                        <li><strong>AMFI Registration:</strong> ARN-178718</li>
+                        <li><strong>Entity Name:</strong> Chetananand Financial Services</li>
+                        <li data-i18n="about-role"><strong>Role:</strong> Mutual Fund Distributor</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mutual Funds Section -->
+        <section id="mutual-funds" class="bg-gray">
+            <h2 class="section-title" data-i18n="mf-title">Mutual Funds</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;" data-i18n="mf-desc">Mutual funds pool money from various investors to purchase a diversified portfolio of stocks, bonds, or other securities, managed by professional fund managers.</p>
+            <div class="grid-3">
+                <div class="card">
+                    <h3 data-i18n="mf-equity">Equity Funds</h3>
+                    <p data-i18n="mf-equity-desc">Investments primarily in stocks. Suitable for long-term horizons and those willing to accept market volatility for potential capital appreciation.</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="mf-debt">Debt Funds</h3>
+                    <p data-i18n="mf-debt-desc">Investments in fixed-income securities like government bonds and corporate debentures. Typically chosen for stability and regular income generation.</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="mf-hybrid">Hybrid Funds</h3>
+                    <p data-i18n="mf-hybrid-desc">A mix of both equity and debt assets. Designed to offer a balanced approach between risk and return.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIP Section -->
+        <section id="sip">
+            <h2 class="section-title" data-i18n="sip-title">Systematic Investment Plan (SIP)</h2>
+            <div class="grid-2">
+                <div>
+                    <h3 data-i18n="sip-what">What is a SIP?</h3>
+                    <p data-i18n="sip-text-1" style="margin-bottom:1rem;">A SIP allows you to invest a fixed amount regularly (monthly or quarterly) in a mutual fund scheme. It instills financial discipline and eliminates the need to time the market.</p>
+                    <ul style="margin-left: 1.5rem; list-style: disc; margin-bottom:1rem;">
+                        <li data-i18n="sip-benefit-1">Rupee Cost Averaging: Buy more units when prices are low, fewer when high.</li>
+                        <li data-i18n="sip-benefit-2">Power of Compounding: Early and regular investing yields potential long-term growth.</li>
+                        <li data-i18n="sip-benefit-3">Flexibility: Start, pause, or modify mandates as per your capacity.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 data-i18n="sip-lumpsum">SIP vs Lumpsum</h3>
+                    <p data-i18n="sip-text-2">While SIPs are ideal for regular salaried investors seeking to build wealth over time, lumpsum investments are suitable when you have a large surplus amount ready to be deployed into the markets.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="bg-gray">
+            <h2 class="section-title" data-i18n="srv-title">Our Operational Services</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3 data-i18n="srv-1">Mutual Fund Transactions</h3>
+                    <p data-i18n="srv-1-desc">Assistance with new fund offerings (NFOs), SIP registrations, STP/SWP setups, and seamless redemptions through trusted digital portals.</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="srv-2">Portfolio Tracking</h3>
+                    <p data-i18n="srv-2-desc">Consolidated account statements and tracking of your investments across various Asset Management Companies (AMCs).</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="srv-3">Government Securities</h3>
+                    <p data-i18n="srv-3-desc">Facilitating secure investments in Government Securities and Treasury Bills via the RBI Retail Direct platform for steady, sovereign-backed options.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section id="why-us">
+            <h2 class="section-title" data-i18n="why-title">Why Choose Us?</h2>
+            <div class="grid-2">
+                <div class="card bg-gray">
+                    <h3 data-i18n="why-1">Registered & Compliant</h3>
+                    <p data-i18n="why-1-desc">We operate strictly under AMFI guidelines, ensuring transparency and adherence to regulatory standards in all our distributions.</p>
+                </div>
+                <div class="card bg-gray">
+                    <h3 data-i18n="why-2">Digital execution</h3>
+                    <p data-i18n="why-2-desc">We leverage secure platforms like CAMS and KFintech to ensure your transactions, mandates, and KYC processes are handled efficiently online.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="section-title" data-i18n="contact-title">Contact Us</h2>
+            <div class="grid-2">
+                <div class="contact-info">
+                    <h3 data-i18n="brand-name">CHETANANAND FINANCIAL SERVICES</h3>
+                    <p style="margin-top: 1rem;"><strong data-i18n="contact-reg">AMFI Registered Mutual Fund Distributor</strong></p>
+                    <p><strong>ARN:</strong> ARN-178718</p>
+                    <p><strong data-i18n="contact-phone">Phone:</strong> <a href="tel:+918076841753">8076841753</a></p>
+                    <p><strong data-i18n="contact-email">Email:</strong> <a href="mailto:cndsrivastava@gmail.com">cndsrivastava@gmail.com</a></p>
+                </div>
+                <div>
+                    <h3 data-i18n="contact-reach" style="margin-bottom: 1rem;">Reach Out Today</h3>
+                    <p data-i18n="contact-desc">Ready to start your investment journey or need assistance with your existing portfolio? Call or email us to schedule a discussion about your financial requirements.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Chetananand Financial Services. All Rights Reserved.</p>
+        <p class="disclaimer" data-i18n="footer-disc">Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</p>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            document.getElementById('nav-links').classList.toggle('active');
+        }
+
+        // Close mobile menu on click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav-links').classList.remove('active');
+            });
+        });
+
+        // i18n Dictionary
+        const translations = {
+            en: {
+                "brand-name": "CHETANANAND FINANCIAL SERVICES",
+                "brand-reg": "AMFI Registered Mutual Fund Distributor",
+                "nav-home": "Home",
+                "nav-about": "About",
+                "nav-mf": "Mutual Funds",
+                "nav-sip": "SIP",
+                "nav-services": "Services",
+                "nav-why": "Why Us",
+                "nav-contact": "Contact",
+                "hero-head": "Plan Your Investments. Build Your Financial Future.",
+                "hero-sub": "Mutual Fund SIP & Lumpsum Investment Assistance",
+                "hero-cta-1": "START YOUR INVESTMENT JOURNEY",
+                "hero-cta-2": "OUR SERVICES",
+                "about-title": "About Us",
+                "about-sub": "Your Dedicated Financial Partner",
+                "about-text-1": "At Chetananand Financial Services, we simplify the investment process for individuals and families. As an AMFI Registered Mutual Fund Distributor, we are committed to facilitating proper asset allocation and disciplined investing strategies.",
+                "about-text-2": "We provide operational support and execution services, ensuring your investment journey is seamless, structured, and aligned with standard financial practices.",
+                "about-creds": "Credentials & Registrations",
+                "about-role": "Role: Mutual Fund Distributor",
+                "mf-title": "Mutual Funds",
+                "mf-desc": "Mutual funds pool money from various investors to purchase a diversified portfolio of stocks, bonds, or other securities, managed by professional fund managers.",
+                "mf-equity": "Equity Funds",
+                "mf-equity-desc": "Investments primarily in stocks. Suitable for long-term horizons and those willing to accept market volatility for potential capital appreciation.",
+                "mf-debt": "Debt Funds",
+                "mf-debt-desc": "Investments in fixed-income securities like government bonds and corporate debentures. Typically chosen for stability and regular income generation.",
+                "mf-hybrid": "Hybrid Funds",
+                "mf-hybrid-desc": "A mix of both equity and debt assets. Designed to offer a balanced approach between risk and return.",
+                "sip-title": "Systematic Investment Plan (SIP)",
+                "sip-what": "What is a SIP?",
+                "sip-text-1": "A SIP allows you to invest a fixed amount regularly (monthly or quarterly) in a mutual fund scheme. It instills financial discipline and eliminates the need to time the market.",
+                "sip-benefit-1": "Rupee Cost Averaging: Buy more units when prices are low, fewer when high.",
+                "sip-benefit-2": "Power of Compounding: Early and regular investing yields potential long-term growth.",
+                "sip-benefit-3": "Flexibility: Start, pause, or modify mandates as per your capacity.",
+                "sip-lumpsum": "SIP vs Lumpsum",
+                "sip-text-2": "While SIPs are ideal for regular salaried investors seeking to build wealth over time, lumpsum investments are suitable when you have a large surplus amount ready to be deployed into the markets.",
+                "srv-title": "Our Operational Services",
+                "srv-1": "Mutual Fund Transactions",
+                "srv-1-desc": "Assistance with new fund offerings (NFOs), SIP registrations, STP/SWP setups, and seamless redemptions through trusted digital portals.",
+                "srv-2": "Portfolio Tracking",
+                "srv-2-desc": "Consolidated account statements and tracking of your investments across various Asset Management Companies (AMCs).",
+                "srv-3": "Government Securities",
+                "srv-3-desc": "Facilitating secure investments in Government Securities and Treasury Bills via the RBI Retail Direct platform for steady, sovereign-backed options.",
+                "why-title": "Why Choose Us?",
+                "why-1": "Registered & Compliant",
+                "why-1-desc": "We operate strictly under AMFI guidelines, ensuring transparency and adherence to regulatory standards in all our distributions.",
+                "why-2": "Digital Execution",
+                "why-2-desc": "We leverage secure platforms like CAMS and KFintech to ensure your transactions, mandates, and KYC processes are handled efficiently online.",
+                "contact-title": "Contact Us",
+                "contact-reg": "AMFI Registered Mutual Fund Distributor",
+                "contact-phone": "Phone:",
+                "contact-email": "Email:",
+                "contact-reach": "Reach Out Today",
+                "contact-desc": "Ready to start your investment journey or need assistance with your existing portfolio? Call or email us to schedule a discussion about your financial requirements.",
+                "footer-disc": "Mutual Fund investments are subject to market risks, read all scheme related documents carefully."
+            },
+            hi: {
+                "brand-name": "चेतनानंद फाइनेंसियल सर्विसेज",
+                "brand-reg": "एएमएफआई (AMFI) पंजीकृत म्यूचुअल फंड वितरक",
+                "nav-home": "होम",
+                "nav-about": "हमारे बारे में",
+                "nav-mf": "म्यूचुअल फंड",
+                "nav-sip": "एसआईपी (SIP)",
+                "nav-services": "सेवाएं",
+                "nav-why": "हम ही क्यों?",
+                "nav-contact": "संपर्क",
+                "hero-head": "अपने निवेश की योजना बनाएं। अपना वित्तीय भविष्य संवारें।",
+                "hero-sub": "म्यूचुअल फंड एसआईपी (SIP) और एकमुश्त निवेश सहायता",
+                "hero-cta-1": "अपनी निवेश यात्रा शुरू करें",
+                "hero-cta-2": "हमारी सेवाएं",
+                "about-title": "हमारे बारे में",
+                "about-sub": "आपका समर्पित वित्तीय भागीदार",
+                "about-text-1": "चेतनानंद फाइनेंसियल सर्विसेज में, हम व्यक्तियों और परिवारों के लिए निवेश प्रक्रिया को सरल बनाते हैं। एक AMFI पंजीकृत म्यूचुअल फंड वितरक के रूप में, हम उचित संपत्ति आवंटन और अनुशासित निवेश रणनीतियों को सुविधाजनक बनाने के लिए प्रतिबद्ध हैं।",
+                "about-text-2": "हम परिचालन सहायता और निष्पादन सेवाएं प्रदान करते हैं, यह सुनिश्चित करते हुए कि आपकी निवेश यात्रा निर्बाध, व्यवस्थित और मानक वित्तीय प्रथाओं के अनुरूप हो।",
+                "about-creds": "क्रेडेंशियल्स और पंजीकरण",
+                "about-role": "भूमिका: म्यूचुअल फंड वितरक",
+                "mf-title": "म्यूचुअल फंड",
+                "mf-desc": "म्यूचुअल फंड विभिन्न निवेशकों से पैसा इकट्ठा करके स्टॉक, बॉन्ड या अन्य प्रतिभूतियों के विविध पोर्टफोलियो में निवेश करते हैं, जिसका प्रबंधन पेशेवर फंड मैनेजरों द्वारा किया जाता है।",
+                "mf-equity": "इक्विटी फंड",
+                "mf-equity-desc": "मुख्य रूप से शेयरों में निवेश। लंबी अवधि के नजरिए वाले और संभावित पूंजी वृद्धि के लिए बाजार की अस्थिरता को स्वीकार करने के इच्छुक निवेशकों के लिए उपयुक्त।",
+                "mf-debt": "डेब्ट फंड",
+                "mf-debt-desc": "सरकारी बॉन्ड और कॉर्पोरेट डिबेंचर जैसी निश्चित-आय वाली प्रतिभूतियों में निवेश। आमतौर पर स्थिरता और नियमित आय सृजन के लिए चुना जाता है।",
+                "mf-hybrid": "हाइब्रिड फंड",
+                "mf-hybrid-desc": "इक्विटी और डेब्ट दोनों संपत्तियों का मिश्रण। जोखिम और रिटर्न के बीच संतुलित दृष्टिकोण प्रदान करने के लिए डिज़ाइन किया गया।",
+                "sip-title": "व्यवस्थित निवेश योजना (SIP)",
+                "sip-what": "एसआईपी क्या है?",
+                "sip-text-1": "एसआईपी आपको म्यूचुअल फंड योजना में नियमित रूप से (मासिक या त्रैमासिक) एक निश्चित राशि निवेश करने की अनुमति देता है। यह वित्तीय अनुशासन पैदा करता है और बाजार को समय देने (मार्केट टाइमिंग) की आवश्यकता को समाप्त करता है।",
+                "sip-benefit-1": "रुपया लागत औसत (Rupee Cost Averaging): कीमतें कम होने पर अधिक यूनिट खरीदें, अधिक होने पर कम।",
+                "sip-benefit-2": "कंपाउंडिंग की शक्ति: जल्दी और नियमित निवेश संभावित दीर्घकालिक विकास प्रदान करता है।",
+                "sip-benefit-3": "लचीलापन: अपनी क्षमता के अनुसार जनादेश (mandate) शुरू करें, रोकें या संशोधित करें।",
+                "sip-lumpsum": "एसआईपी बनाम एकमुश्त",
+                "sip-text-2": "जहां एसआईपी समय के साथ संपत्ति बनाने के इच्छुक नियमित वेतनभोगी निवेशकों के लिए आदर्श हैं, वहीं एकमुश्त निवेश तब उपयुक्त होता है जब आपके पास बाजारों में निवेश करने के लिए एक बड़ी अधिशेष राशि तैयार हो।",
+                "srv-title": "हमारी परिचालन सेवाएं",
+                "srv-1": "म्यूचुअल फंड लेनदेन",
+                "srv-1-desc": "नए फंड ऑफर (NFO), SIP पंजीकरण, STP/SWP सेटअप, और विश्वसनीय डिजिटल पोर्टलों के माध्यम से निर्बाध निकासी (redemption) में सहायता।",
+                "srv-2": "पोर्टफोलियो ट्रैकिंग",
+                "srv-2-desc": "समेकित खाता विवरण (CAS) और विभिन्न एसेट मैनेजमेंट कंपनियों (AMC) में आपके निवेश की ट्रैकिंग।",
+                "srv-3": "सरकारी प्रतिभूतियां",
+                "srv-3-desc": "स्थिर, संप्रभु-समर्थित विकल्पों के लिए RBI रिटेल डायरेक्ट प्लेटफॉर्म के माध्यम से सरकारी प्रतिभूतियों (G-Sec) और ट्रेजरी बिलों (T-Bills) में सुरक्षित निवेश की सुविधा।",
+                "why-title": "हमें क्यों चुनें?",
+                "why-1": "पंजीकृत और अनुपालक",
+                "why-1-desc": "हम कड़ाई से AMFI दिशानिर्देशों के तहत काम करते हैं, अपने सभी वितरणों में पारदर्शिता और नियामक मानकों का पालन सुनिश्चित करते हैं।",
+                "why-2": "डिजिटल निष्पादन",
+                "why-2-desc": "हम यह सुनिश्चित करने के लिए CAMS और KFintech जैसे सुरक्षित प्लेटफार्मों का लाभ उठाते हैं कि आपके लेनदेन, जनादेश और केवाईसी (KYC) प्रक्रियाओं को ऑनलाइन कुशलतापूर्वक नियंत्रित किया जाए।",
+                "contact-title": "संपर्क करें",
+                "contact-reg": "एएमएफआई (AMFI) पंजीकृत म्यूचुअल फंड वितरक",
+                "contact-phone": "फ़ोन:",
+                "contact-email": "ईमेल:",
+                "contact-reach": "आज ही संपर्क करें",
+                "contact-desc": "क्या आप अपनी निवेश यात्रा शुरू करने के लिए तैयार हैं या अपने मौजूदा पोर्टफोलियो के संबंध में सहायता की आवश्यकता है? अपनी वित्तीय आवश्यकताओं के बारे में चर्चा करने के लिए हमें कॉल या ईमेल करें।",
+                "footer-disc": "म्यूचुअल फंड निवेश बाजार जोखिमों के अधीन हैं, योजना से संबंधित सभी दस्तावेजों को ध्यान से पढ़ें।"
+            }
+        };
+
+        // Language Switching Logic
+        function setLanguage(lang) {
+            // Update buttons
+            document.querySelectorAll('.lang-switch').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Update text content
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    // check if element contains HTML (like the strong tags in role)
+                    if(element.innerHTML.includes('<strong') || element.innerHTML.includes('<span')){
+                         // Special handling if needed, but for our simple setup textContent is mostly fine, 
+                         // except for about-role. Let's just use innerHTML to be safe with basic tags.
+                         element.innerHTML = element.innerHTML.replace(element.textContent.trim(), translations[lang][key]);
+                    } else {
+                        element.textContent = translations[lang][key];
+                    }
+                }
+            });
+
+            // Specific updates for nested tags
+            document.querySelector('[data-i18n="about-role"]').innerHTML = `<strong>${lang === 'hi' ? 'भूमिका:' : 'Role:'}</strong> ${translations[lang]['about-role'].split(':')[1].trim()}`;
+            document.querySelector('[data-i18n="contact-phone"]').innerHTML = lang === 'hi' ? 'फ़ोन:' : 'Phone:';
+            document.querySelector('[data-i18n="contact-email"]').innerHTML = lang === 'hi' ? 'ईमेल:' : 'Email:';
+        }
+    </script>
+</body>
+</html>
